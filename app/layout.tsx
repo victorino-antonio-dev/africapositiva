@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://africapositiva.example"),
+  metadataBase: new URL("https://africapositiva.onrender.com"),
   title: { default: "África Positiva — Viagens, documentos e comunidade", template: "%s | África Positiva" },
   description: "Apoio em viagens, vistos, legalização, documentação e integração para a comunidade africana.",
   openGraph: { title: "África Positiva", description: "Ligamos sonhos, viagens e oportunidades.", type: "website", locale: "pt_PT" },
