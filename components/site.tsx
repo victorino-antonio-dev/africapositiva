@@ -10,7 +10,7 @@ import { faqs } from "@/data/faqs";
 
 export const nav = [
   ["Início", "/"], ["Quem Somos", "/quem-somos"], ["Serviços", "/servicos"],
-  ["Travel", "/travel"], ["Comunidade", "/comunidade"], ["Notícias", "/noticias"], ["Contactos", "/contactos"]
+  ["Travel", "/travel"], ["Comunidade", "/comunidade"], ["Equipa", "/equipa"], ["Notícias", "/noticias"], ["Contactos", "/contactos"]
 ];
 
 export function Logo({ light = false }: { light?: boolean }) {
