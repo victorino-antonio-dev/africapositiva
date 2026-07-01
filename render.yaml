@@ -1,16 +1,12 @@
 services:
   - type: web
     name: africapositiva
-    runtime: node
-    plan: free
+    runtime: static
     region: frankfurt
     branch: main
     autoDeployTrigger: commit
     buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm build
-    startCommand: pnpm start
-    healthCheckPath: /
+    staticPublishPath: ./out
     envVars:
       - key: NODE_VERSION
         value: 22.16.0
-      - key: NODE_ENV
-        value: production
