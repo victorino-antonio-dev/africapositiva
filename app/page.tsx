@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Compass, Globe2, HeartHandshake, Plane, Sparkles } from "lucide-react";
-import { blogPosts } from "@/data/blogPosts";
 import { services } from "@/data/services";
 import { FAQAccordion, Reveal, SectionTitle, TrustBar } from "@/components/site";
+import { getBlogPosts } from "@/lib/cms";
 
-export default function Home() {
+export default async function Home() {
+  const blogPosts = (await getBlogPosts()).slice(0, 4);
+
   return <>
     <section className="sun-grid relative overflow-hidden bg-ink pb-20 pt-16 text-white lg:pb-28 lg:pt-20">
       <div className="absolute -right-24 top-10 h-[560px] w-[560px] rounded-full bg-gradient-to-br from-yellow-300 via-orange-500 to-orange-950 opacity-90 blur-[1px]" />
