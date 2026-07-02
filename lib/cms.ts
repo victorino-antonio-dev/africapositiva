@@ -17,7 +17,7 @@ export type BlogPost = {
   seoDescription?: string;
 };
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "o84b2tuv";
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
 const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2026-03-01";
 
@@ -35,7 +35,7 @@ const postsQuery = `*[_type == "post" && defined(slug.current)] | order(publishe
   "author": author->name,
   "date": coalesce(publishedAt, _createdAt),
   "read": coalesce(readingTime, "5 min"),
-  mainImage,
+  "image": mainImage,
   body,
   faq[]{question, answer},
   "seoTitle": seo.title,

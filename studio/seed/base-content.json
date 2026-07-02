@@ -1,0 +1,7 @@
+[
+  {"_id":"category-viagens","_type":"category","title":"Viagens","slug":{"_type":"slug","current":"viagens"}},
+  {"_id":"category-vistos","_type":"category","title":"Vistos","slug":{"_type":"slug","current":"vistos"}},
+  {"_id":"category-documentacao","_type":"category","title":"Documentação","slug":{"_type":"slug","current":"documentacao"}},
+  {"_id":"category-comunidade","_type":"category","title":"Comunidade","slug":{"_type":"slug","current":"comunidade"}},
+  {"_id":"author-africa-positiva","_type":"author","name":"África Positiva","slug":{"_type":"slug","current":"africa-positiva"},"bio":"Equipa editorial da África Positiva."}
+]

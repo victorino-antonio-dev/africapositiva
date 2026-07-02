@@ -1,4 +1,6 @@
 import { PortableText, type PortableTextComponents } from "@portabletext/react";
+import Image from "next/image";
+import { sanityImageUrl } from "@/lib/cms";
 
 const components: PortableTextComponents = {
   block: {
@@ -13,6 +15,27 @@ const components: PortableTextComponents = {
   },
   marks: {
     link: ({ children, value }) => <a href={value?.href} className="font-semibold text-orange-700 underline" target="_blank" rel="noreferrer">{children}</a>
+  },
+  types: {
+    image: ({ value }) => {
+      const src = sanityImageUrl(value, 1400, 900);
+      if (!src) return null;
+
+      return (
+        <figure className="my-10 overflow-hidden rounded-3xl bg-stone-100">
+          <Image
+            src={src}
+            alt={value?.alt || ""}
+            width={1400}
+            height={900}
+            className="h-auto w-full object-cover"
+          />
+          {value?.caption ? (
+            <figcaption className="px-5 py-3 text-sm text-stone-600">{value.caption}</figcaption>
+          ) : null}
+        </figure>
+      );
+    }
   }
 };
 

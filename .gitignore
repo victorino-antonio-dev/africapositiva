@@ -19,6 +19,8 @@ Thumbs.db
 .vscode/
 .idea/
 .codex_tmp/
+studio/.sanity/
+studio/dist/
 
 # TypeScript
 *.tsbuildinfo
